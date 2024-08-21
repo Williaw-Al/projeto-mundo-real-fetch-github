@@ -4,7 +4,7 @@ import { getRepositories } from "./services/repositories.js"
 import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
 
-const btnBuscar = document.getElementById("btn-search")
+const btnSearch = document.getElementById("btn-search")
 const userNameInput = document.getElementById("input-search")
 
 userNameInput.addEventListener("keyup", (e) => {
@@ -18,7 +18,7 @@ userNameInput.addEventListener("keyup", (e) => {
     }
 })
 
-btnBuscar.addEventListener("click", () => {
+btnSearch.addEventListener("click", () => {
     const userName = userNameInput.value
     if(validateEmptyInput(userName)) return
     getUserData(userName)
