@@ -16,4 +16,3 @@ const user = {
 }
 
 export { user }
-

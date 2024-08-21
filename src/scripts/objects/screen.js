@@ -27,4 +27,3 @@ const screen = {
 }
 
 export { screen }
-

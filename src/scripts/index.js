@@ -5,9 +5,9 @@ import { user } from "./objects/user.js"
 import { screen } from "./objects/screen.js"
 
 const btnSearch = document.getElementById("btn-search")
-const userNameInput = document.getElementById("input-search")
+const userInputSearch = document.getElementById("input-search")
 
-userNameInput.addEventListener("keyup", (e) => {
+userInputSearch.addEventListener("keyup", (e) => {
     const userName = e.target.value
     const key = e.which || e.keyCode
     const isEnterKeyPressed = key === 13
@@ -19,7 +19,7 @@ userNameInput.addEventListener("keyup", (e) => {
 })
 
 btnSearch.addEventListener("click", () => {
-    const userName = userNameInput.value
+    const userName = userInputSearch.value
     if(validateEmptyInput(userName)) return
     getUserData(userName)
 })
