@@ -6,6 +6,7 @@ const user = {
     followers: "",
     following: "",
     repositories: [],
+    events: [],
     setInfo(gitHubUser){
         console.log(gitHubUser.events_url);
         
@@ -18,6 +19,9 @@ const user = {
     },
     setRepositories(repositories){
         this.repositories = repositories
+    },
+    setEvents(events){
+        this.events = events
     }
 }
 

@@ -16,7 +16,10 @@ const screen = {
                                                                     <a href="${repo.html_url}" target="_blank">
                                                                         ${repo.name}
                                                                         <div class="icons">
-                                                                            <p>Olá🚗</p> <p>Olá🚗</p> <p>Olá🚗</p>
+                                                                            <p>🍴 ${repo.forks}</p>
+                                                                            <p>⭐ ${repo.stargazers_count}</p>
+                                                                            <p>👀 ${repo.watchers}</p>
+                                                                            <p>👩‍💻 ${repo.language}</p>
                                                                         </div>
                                                                     </a>
                                                                 </li>`)
@@ -25,6 +28,22 @@ const screen = {
             this.userProfile.innerHTML += `<div class="repositories section">
                                                 <h2>Repositórios</h2>
                                                 <ul>${repositoriesItens}</ul>
+                                           </div>`
+        }
+
+        let eventItems = ""
+        user.events.forEach(event  => {
+            if(event.type === "PushEvent"){
+                eventItems += `<li><a href="${event.repo.url}" target="_blank">${event.repo.name} ${event.payload.commits[0].message}</a></li>`
+                
+            }else if(event.type === "CreateEvent"){
+                eventItems += `<li><a href="${event.repo.url}" target="_blank">${event.repo.name} create</a></li>`
+            }})
+
+        if(user.events.length > 0){
+            this.userProfile.innerHTML += `<div class="repositories section">
+                                                <h2>Eventos</h2>
+                                                <ul>${eventItems}</ul>
                                            </div>`
         }
 

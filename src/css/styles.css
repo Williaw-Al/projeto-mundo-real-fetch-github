@@ -158,6 +158,8 @@ main {
 
 .container .profile-data .repositories ul li a .icons p{
   background-color:  blueviolet;
+  padding: 3px;
+  color: #fff;
   border-radius: 5px;
 }
 
