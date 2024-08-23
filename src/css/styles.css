@@ -121,7 +121,7 @@ main {
   line-height: 23px;
 }
 
-/* REPOSITORIES */
+/* MARK:REPOSITORIES */
 
 .container .profile-data .repositories h2{
   margin-bottom: 30px;
@@ -146,6 +146,19 @@ main {
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories ul li a .icons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.container .profile-data .repositories ul li a .icons p{
+  background-color:  blueviolet;
+  border-radius: 5px;
 }
 
 .container .profile-data.hide{

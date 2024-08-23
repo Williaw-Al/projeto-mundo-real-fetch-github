@@ -6,11 +6,20 @@ const screen = {
                             <div class="data">
                                 <h1>${user.name ?? "O usuário não possui nome cadastrado 😥"}</h1>
                                 <p>${user.bio ?? "O usuário não possui bio cadastrada 😥"}</p>
+                                <p>👥 Seguindo ${user.following}</p>
+                                <p>🏃🏽‍♂️ Seguidores ${user.followers}</p>
                             </div>
                         </div>`
 
         let repositoriesItens = ""
-        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
+        user.repositories.forEach(repo => repositoriesItens += `<li>
+                                                                    <a href="${repo.html_url}" target="_blank">
+                                                                        ${repo.name}
+                                                                        <div class="icons">
+                                                                            <p>Olá🚗</p> <p>Olá🚗</p> <p>Olá🚗</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>`)
 
         if(user.repositories.length > 0){
             this.userProfile.innerHTML += `<div class="repositories section">
