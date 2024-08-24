@@ -99,8 +99,30 @@ main {
 }
 
 .container .profile-data .info .data{
+  display: flex;
+  flex-direction: column;
   padding: 40px;
   width: 50%;
+}
+
+.container .profile-data .info .data .divider{
+  display: block;
+  margin: 10px 0px;
+  align-self: center;
+  background-color: black;
+  width: 1px;
+  height: 50px;
+}
+
+.container .profile-data .info .data .follow{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.container .profile-data .info .data .follow p span{
+  display: block;
 }
 
 .container .profile-data .info img{
@@ -121,9 +143,9 @@ main {
   line-height: 23px;
 }
 
-/* MARK:REPOSITORIES */
+/* REPOSITORIES */
 
-.container .profile-data .repositories h2{
+.container .profile-data .repositories h2, .container .profile-data .events h2{
   margin-bottom: 30px;
   text-align: center;
 }
@@ -151,16 +173,39 @@ main {
 .container .profile-data .repositories ul li a .icons{
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 3px;
 }
 
 .container .profile-data .repositories ul li a .icons p{
-  background-color:  blueviolet;
-  padding: 3px;
+  background-color:  #6A5ACE;
+  padding: 3px 5px;
   color: #fff;
   border-radius: 5px;
+}
+
+/* EVENTS */
+.container .profile-data .events{
+  padding: 10px;
+  background-color: #F2F2F2;
+}
+
+.container .profile-data .events h2{
+  font-weight: 700;
+  color: #2E3339;
+}
+
+.container .profile-data .events ul li{
+  margin: 15px 0px;
+}
+
+.container .profile-data .events ul li:hover{
+  color: hotpink;
+}
+
+.container .profile-data .events ul li strong{
+  font-weight: 700;
 }
 
 .container .profile-data.hide{
@@ -189,6 +234,10 @@ main {
   .container header #btn-search
   {
     width: 100%;
+  }
+
+  .container .profile-data .events ul li{
+    margin: 30px 0px;
   }
 }
 
