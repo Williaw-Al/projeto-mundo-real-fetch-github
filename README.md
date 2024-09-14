@@ -1,6 +1,13 @@
 # Desafio JS Avançado - Quest API GitHub
 Desafio de JavaScript avançado, com o uso do fetch e API do GitHub, proposto no curso DevQuest do Dev em Dobro.
 
+## 🛠 Mudanças 14/09 🛠
+- Validação para todos dados do usuário, caso null ou undefined;
+- Busca de diferentes tipos de repositórios com Filter() e Slice();
+    - Arquivo events.js completamente reformatado;
+    - Busca dos eventos no screen.js atualizado para usar a lista do filter;
+- Removido o link âncora para os repositórios, a partir dos eventos;
+
 ## 🧩 Atividade Proposta 🧩
 <div align=center>
     <img src="./src/design/hud-solicitacao-1.png" alt="Imagem cabeçalho da solicitação 1">
